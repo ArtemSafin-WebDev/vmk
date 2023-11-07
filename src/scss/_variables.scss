@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #fe4f23;
+  --text-color: #233a42;
+  --cofo: "CoFo Sans", sans-serif;
+  --content-padding: 6rem;
+  --container-width: 132rem;
+  --scale-factor: 1;
+  @include breakpoint(mobile) {
+    --content-padding: 2rem;
+  }
+}

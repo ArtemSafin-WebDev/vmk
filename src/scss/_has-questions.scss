@@ -1,0 +1,225 @@
+.has-questions {
+  @include blockWrapper;
+  margin-bottom: sf(7rem);
+}
+
+.has-questions__content {
+  @include blockContent;
+  position: relative;
+  z-index: 1;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: sf(4.1rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: sf(1.2rem);
+  border-radius: sf(0.6rem);
+  overflow: hidden;
+}
+
+.has-questions__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      0deg,
+      rgba(35, 58, 66, 0.5) 0%,
+      rgba(35, 58, 66, 0.5) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    background: #fe4f23;
+    mix-blend-mode: multiply;
+    z-index: 4;
+  }
+}
+
+.has-questions__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.has-questions__text-content {
+  display: flex;
+  flex-direction: column;
+  padding: sf(3.7rem) sf(4.6rem);
+  gap: sf(4rem);
+}
+
+.has-questions__heading {
+  font-size: sf(6rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(5.7rem);
+}
+
+.has-questions__text {
+  font-size: sf(1.7rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(1.9rem);
+  max-width: sf(35rem);
+}
+
+.has-questions__form {
+  display: flex;
+  flex-direction: column;
+  padding: sf(5.4rem);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: sf(0.6rem);
+}
+
+.has-questions__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: sf(0.5rem);
+}
+
+.has-questions__form-input {
+  display: block;
+  width: 100%;
+  font-size: sf(1.7rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: sf(4.7rem);
+  border-bottom: 1px solid #65443d;
+  transition: border-color 0.2s;
+  &::placeholder {
+    color: white;
+  }
+
+  &.not-valid {
+    border-color: var(--primary-color);
+  }
+}
+
+.has-questions__form-file-upload {
+  display: block;
+  cursor: default;
+  position: relative;
+}
+
+.has-questions__form-file-upload-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.has-questions__form-file-upload-text {
+  display: block;
+  width: 100%;
+  font-size: sf(1.7rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: sf(4.7rem);
+  border-bottom: 1px solid #65443d;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.has-questions__form-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: sf(2rem);
+  align-items: center;
+  margin-top: sf(4rem);
+}
+
+.has-questions__form-policy {
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  gap: sf(0.7rem);
+  cursor: pointer;
+  user-select: none;
+}
+
+.has-questions__form-policy-checkbox {
+  display: none;
+}
+
+.has-questions__form-policy-checkbox-mark {
+  flex-shrink: 0;
+  background-color: #ffb39f;
+  width: sf(1.8rem);
+  height: sf(1.8rem);
+  display: grid;
+  place-items: center;
+  border-radius: sf(0.2rem);
+
+  svg {
+    flex-shrink: 0;
+    width: sf(1.3rem);
+    height: sf(1rem);
+    opacity: 0;
+    transition: opacity 0.2s;
+    fill: white;
+  }
+}
+
+.has-questions__form-policy-checkbox:checked
+  ~ .has-questions__form-policy-checkbox-mark {
+  svg {
+    opacity: 1;
+  }
+}
+
+.has-questions__form-policy-checkbox-text {
+  color: #ffb39f;
+  font-size: sf(1.4rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(1.5rem);
+  width: 30%;
+  flex-grow: 1;
+  margin-top: sf(-0.1rem);
+
+  a {
+    color: white;
+    &:link,
+    &:visited {
+      color: white;
+    }
+  }
+}
+
+.has-questions__form-submit {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: sf(1.6rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: sf(1.9rem) sf(3.2rem);
+  color: #233a42;
+  background-color: #fff;
+  border-radius: sf(0.5rem);
+  transition: background-color 0.2s, color 0.2s;
+}

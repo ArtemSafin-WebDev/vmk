@@ -1,0 +1,106 @@
+.products {
+  @include blockWrapper;
+  margin-bottom: sf(10rem);
+}
+
+.products__content {
+  @include blockContent;
+}
+
+.products__heading {
+  font-size: sf(3.1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: sf(3.4rem);
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: sf(1.2rem);
+}
+
+.products__list-item {
+  display: flex;
+  flex-direction: column;
+  @include breakpointMF(small-tablet) {
+    &:nth-child(5n + 1) {
+      grid-column: 1 / -1;
+
+      .products__card {
+        min-height: sf(40.6rem);
+      }
+    }
+  }
+}
+
+.products__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  border-radius: sf(0.6rem);
+  background: #233a42;
+  color: white;
+  gap: sf(3rem);
+  overflow: hidden;
+  min-height: sf(33rem);
+  padding: sf(3rem) sf(4.6rem);
+  padding-bottom: sf(4.6rem);
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .products__card-btn {
+        background-color: var(--primary-color);
+        color: white;
+      }
+    }
+  }
+}
+
+.products__card-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-position: right bottom;
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  transition: transform 0.4s;
+  transform-origin: right bottom;
+  z-index: -1;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.products__card-title {
+  font-size: sf(6rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(5.7rem);
+}
+
+.products__card-btn {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: sf(1rem) sf(2.5rem);
+  font-size: sf(1.5rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: sf(4rem);
+  background: #fff;
+  color: #233a42;
+  margin-right: auto;
+  margin-top: auto;
+  transition: background-color 0.2s, color 0.2s;
+}

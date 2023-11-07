@@ -1,0 +1,11 @@
+.annotation {
+  font-size: calc(3.1rem * var(--scale-factor, 1));
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: calc(4rem * var(--scale-factor, 1));
+}
+
+.annotation:first-child {
+  margin-top: 0;
+}

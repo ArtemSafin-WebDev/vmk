@@ -1,0 +1,15 @@
+.fullwidth-image {
+  margin: 0 calc(-1 * var(--scale-factor, 1) * 24rem);
+  margin-top: calc(1 * var(--scale-factor, 1) * 4rem);
+}
+
+.fullwidth-image:first-child {
+  margin-top: 0;
+}
+
+.fullwidth-image__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--scale-factor, 1) * 0.6rem);
+}

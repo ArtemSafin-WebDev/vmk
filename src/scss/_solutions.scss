@@ -1,0 +1,66 @@
+.solutions {
+  @include blockWrapper;
+  padding-top: sf(4.5rem);
+  padding-bottom: sf(5.8rem);
+  background-color: #fff;
+  margin-bottom: sf(7rem);
+}
+
+.solutions__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: sf(4.6rem);
+}
+
+.solutions__heading {
+  font-size: sf(3.1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.solutions__slider {
+  .swiper-slide {
+    width: calc(50% - (var(--scale-factor, 1) * 2.5rem) / 2);
+    margin-right: sf(2.5rem);
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+}
+
+.solutions__slider-card {
+  display: flex;
+  flex-direction: column;
+  gap: sf(1.4rem);
+}
+
+.solutions__slider-card-image-wrapper {
+  position: relative;
+  border-radius: sf(0.6rem);
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 44.2%;
+  }
+}
+
+.solutions__slider-card-title {
+  font-size: sf(1.8rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: sf(2.1rem);
+}
+
+.solutions__slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

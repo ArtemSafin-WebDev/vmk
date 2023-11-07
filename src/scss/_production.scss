@@ -1,0 +1,72 @@
+.production {
+  @include blockWrapper;
+  margin-bottom: sf(6rem);
+}
+
+.production__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: sf(4.1rem);
+}
+
+.production__heading {
+  font-size: sf(3.1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.production__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: sf(2.5rem);
+}
+
+.production__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.production__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  padding: sf(1.8rem) sf(3rem);
+  padding-bottom: sf(3rem);
+  background-color: #233a42;
+  color: white;
+  min-height: sf(28.6rem);
+  gap: sf(3rem);
+
+  svg {
+    flex-shrink: 0;
+    width: sf(2.1rem);
+    height: sf(2.1rem);
+    fill: currentColor;
+    margin-top: auto;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+.production__card-title {
+  font-size: sf(3.1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(3.2rem);
+}
+
+.production__card-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+}

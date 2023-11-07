@@ -1,0 +1,58 @@
+.advantages {
+  @include blockWrapper;
+  margin-bottom: sf(10rem);
+}
+
+.advantages__content {
+  @include blockContent;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: sf(0.6rem);
+}
+
+.advantages__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: sf(0.5rem);
+  background: #fff;
+  padding: sf(2.6rem);
+  padding-top: sf(1.7rem);
+  padding-bottom: sf(2.1rem);
+  color: var(--text-color);
+  gap: sf(2.4rem);
+}
+
+.advantages__card-icon {
+  width: sf(4.8rem);
+  height: sf(4.8rem);
+  object-fit: contain;
+}
+
+.advantages__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: sf(0.9rem);
+}
+
+.advantages__card-title {
+  font-size: sf(3.1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.advantages__card-text {
+  font-size: sf(1.7rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: sf(1.9rem);
+}

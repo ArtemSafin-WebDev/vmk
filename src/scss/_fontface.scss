@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("../fonts/CoFoSans-Regular.woff2") format("woff2"),
+    url("../fonts/CoFoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("../fonts/CoFoSans-Medium.woff2") format("woff2"),
+    url("../fonts/CoFoSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("../fonts/CoFoSans-Bold.woff2") format("woff2"),
+    url("..fonts/CoFoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
